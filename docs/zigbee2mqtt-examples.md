@@ -167,3 +167,8 @@ Zigbee2MQTT can be a bit noisy with status messages, so to only view messages fr
 ```
 mosquitto_sub -v -u "<mqtt_username>" -P "<mqtt_password>" -h "<server_ip>" -p <server_port> -t "zigbee2mqtt/SoilSensor1/#"
 ```
+### Example Zigbee2MQTT output
+
+```
+zigbee2mqtt/bridge/state {"state":"online"}
+```
