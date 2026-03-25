@@ -30,7 +30,7 @@ Click on the '+' button toward the bottom right of the screen.
 
 Select 'Create Widget'.
 
-Enter a label for your widget in the 'Name' text box, for example 'GardenBed1', then pick a widget group such as 'Backyard'.
+Enter a label for your widget in the 'Name' text box, for example 'GardenBed1' and then pick a widget group such as 'Backyard'.
 
 ### Displaying humidity from the sensor
 
@@ -126,7 +126,7 @@ From the home screen click on the '+' button toward the bottom right of the scre
 
 Select 'Create Widget'.
 
-Enter a label for your widget in the 'Name' text box such as 'GardenTap', then pick a widget group such as 'Backyard'.
+Enter a label for your widget in the 'Name' text box such as 'GardenTap' and then pick a widget group such as 'Backyard'.
 
 ### Adding a switch to turn water on and off remotely
 
