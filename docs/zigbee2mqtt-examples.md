@@ -6,13 +6,19 @@ I found starting out with [MQTT Dashboard](https://play.google.com/store/apps/de
 
 This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), is setup, and you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) sending and receiving MQTT messages, and you have MQTT Dashboard connected to that MQTT server.
 
-[My GitHub repository](https://github.com/evilbunny2008/UsefulScriptsAndOtherTidbits/tree/main/MQTT) has configuration examples and useful things to know for Debian 13/Trixie.
+[My GitHub repository](https://github.com/evilbunny2008/UsefulScriptsAndOtherTidbits/tree/main/MQTT) has configuration examples and useful things to know for [Debian 13/Trixie](https://www.debian.org/).
 
 ## Adding a soil moisture sensor
 
 [Zigbee soil monitoring sensors](https://www.aliexpress.com/item/1005008987466283.html) provide temperature, humidity and soil moisture readings.
 
-It's advisable to set the friendly name for your sensor in the Zigbee2MQTT web interface to something more memorable, such as 'SoilSensor1', you can do this by going to the device section, then click on the current friendly name and then click on the edit icon next to the friendly name. By default this will be 0x followed by a hex string which can be used if you don't change it.
+It's advisable to set a friendly name for your devices in the Zigbee2MQTT web interface to something memorable, such as 'SoilSensor1' for a soil moisture sensor.
+
+To do this, go to the device section, then click on the current friendly name on the left side of the device table.
+
+Then click on the edit icon next to the friendly name.
+
+By default this will be 0x followed by a hex string which can be used if you don't change it.
 
 ### From the MQTT Dashboard home screen
 
