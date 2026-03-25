@@ -138,7 +138,7 @@ For 'Type' select 'Switch'.
 
 For 'Status Icon "On"' there isn't a suitable tap or water icon available, so I picked the power plug icon which can be found on the second last row.
 
-For 'Status Icon "On"' I picked the power plug icon which is crossed out and it can be found on the second last row next to the on icon.
+For 'Status Icon "On"' I picked the power plug icon which is crossed out and it can be found on the second last row next to the power plug icon.
 
 For 'Subscription' in this case it would be 'zigbee2mqtt/GardenTap'.
 
