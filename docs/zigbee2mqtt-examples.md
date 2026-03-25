@@ -2,11 +2,11 @@
 
 # Introduction
 
-I found starting out with [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.app.vetru.mqttdashboard) to be a little daunting, mainly due to a lack of example configurations, my hope is detailing what I was able to accomplish will help others to use Zigbee devices to escape corporate cloud based services that end up being turned off leaving you with expensive bookends.
+I found starting out with [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.app.vetru.mqttdashboard) to be a little daunting, mainly due to a lack of example configurations, my hope is detailing what I was able to accomplish will help others to use Zigbee devices, and avoid corporate cloud services that have a tendency to be turned off, leaving you with expensive toys that can't be used.
 
-This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), is setup, you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) and it's sending and receiving MQTT messages, and you have MQTT Dashboard connected to the same MQTT server and it can receive messages.
+This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), is setup, and you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) sending and receiving MQTT messages, and you have MQTT Dashboard connected to that MQTT server.
 
-If you need help getting those working check out [my GitHub repository](https://github.com/evilbunny2008/UsefulScriptsAndOtherTidbits/tree/main/MQTT) with details for Debian 13/Trixie for configuration examples and things I found useful to know.
+[My GitHub repository](https://github.com/evilbunny2008/UsefulScriptsAndOtherTidbits/tree/main/MQTT) has configuration examples and useful things to know for Debian 13/Trixie.
 
 ## Adding a soil moisture sensor
 
