@@ -150,7 +150,9 @@ Your should now see one or more switches on the home screen and touching on them
 
 ## Debugging
 
-Using the `mosquitto_sub` program you can listen for MQTT packets, this can be useful for identifying the actual device names Zigbee2MQTT uses.
+While MQTT dashboard does offer access to some MQTT messages, it seems to be restricted to configured widgets and values.
+
+Using the `mosquitto_sub` program you can listen for complete MQTT messages, this can be useful for identifying the actual device names Zigbee2MQTT uses.
 
 ### Listen for all messages under the zigbee2mqtt topic
 
@@ -165,4 +167,3 @@ Zigbee2MQTT can be a bit noisy with status messages, so to only view messages fr
 ```
 mosquitto_sub -v -u "<mqtt_username>" -P "<mqtt_password>" -h "<server_ip>" -p <server_port> -t "zigbee2mqtt/SoilSensor1/#"
 ```
-
