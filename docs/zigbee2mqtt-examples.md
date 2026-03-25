@@ -116,7 +116,7 @@ Just click 'Done' and it will take you back to the home screen hopefully showing
 
 ## Adding a device that does more than broadcast sensor information
 
-Unlike the soil moisture sensors, other devices such as smart water timers can be made to turn water on and off.
+Unlike soil moisture sensors, other devices such as smart water timers can be made to turn water on and off.
 
 This functionality adds a little more complication as you need to set addiitonal details in the sending section.
 
