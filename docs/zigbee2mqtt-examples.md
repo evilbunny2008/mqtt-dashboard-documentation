@@ -116,9 +116,9 @@ Just click 'Done' and it will take you back to the home screen hopefully showing
 
 ## Adding a device that does more than broadcast sensor information
 
-Unlike the soil moisture sensors, other devices such as smart water timers can be made to dturn water on and off.
+Unlike the soil moisture sensors, other devices such as smart water timers can be made to turn water on and off.
 
-This functionality adds a little more complicatation as you need to set additonal details in the sending section.
+This functionality adds a little more complication as you need to set addiitonal details in the sending section.
 
 [Zigbee smart water timers](https://www.aliexpress.com/item/1005009335943136.html) allow you to automate turning water on and off.
 
