@@ -4,7 +4,7 @@
 
 Starting out with MQTT Dashboard is a little daunting mainly due to a lack of examples and details on how to configure MQTT Dashboard, below is what I found to work.
 
-This documante assumes a MQTT server setup and working, you also have Zigbee2MQTT setup and working and you have MQTT Dashboard setup and working.
+This documante assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), has been setup and is working, you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) has been setup and is working, and you have MQTT Dashboard setup and is connected to the MQTT server.
 
 ## Adding a soil moisture sensor
 
