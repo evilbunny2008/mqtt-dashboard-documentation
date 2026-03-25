@@ -120,7 +120,7 @@ Unlike the soil moisture sensors, other devices such as smart water timers can b
 
 This functionality adds a little more complication as you need to set addiitonal details in the sending section.
 
-[Zigbee smart water timers](https://www.aliexpress.com/item/1005009335943136.html) allow you to automate turning water on and off.
+Zigbee based [smart water timers](https://www.aliexpress.com/item/1005009335943136.html) allows automating turning taps on and off.
 
 As with the soil moisture sensor it's worth while setting a friendly name for the device to something friendlier like 'GardenTap'.
 
