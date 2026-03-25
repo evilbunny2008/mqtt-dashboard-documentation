@@ -18,7 +18,7 @@ Select 'Create Widget'.
 
 Enter a label for your widget in the 'Name' text box, for example 'GardenBed1', then pick a widget group such as 'Backyard'.
 
-### Adding a humidity reading
+### Displaying humidity from the sensor
 
 Touch on 'Text' in the 'Widget Properties' section.
 
@@ -40,7 +40,7 @@ For 'Decimal places' set this to '0'
 
 Click 'Done'
 
-### Adding a moisture reading
+### Displaying moisture from the sensor
 
 Click on the '+' button under the 'Widget Properties' section.
 
@@ -58,7 +58,7 @@ For 'Decimal places' set this to '0'
 
 Click 'Done'
 
-### Adding a temperature reading
+### Displaying temperature from the sensor
 
 Click on the '+' button under the 'Widget Properties' section.
 
@@ -76,7 +76,7 @@ For 'Decimal places' set this to '1'
 
 Click 'Done'
 
-### Adding a LQI reading (optional)
+### Displaying LQI from the sensor (optional)
 
 I found it useful to use the 4th and final box to show the LQI reported by the sensor as this will give visual feed back if the placement of the sensor is too far from your Zigbee co-ordinator or router.
 
