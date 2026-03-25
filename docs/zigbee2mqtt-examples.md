@@ -14,7 +14,7 @@ My hope is documenting examples will help people avoid corporate cloud services 
 
 ## Adding a soil moisture sensor
 
-[Zigbee soil monitoring sensors](https://www.aliexpress.com/item/1005008987466283.html) provide temperature, humidity and soil moisture readings.
+[Zigbee based soil moisture sensors](https://www.aliexpress.com/item/1005008987466283.html) are incredibly good value for money and provide temperature, humidity and soil moisture readings.
 
 It's advisable to set a friendly name for your devices in the Zigbee2MQTT web interface to something memorable, such as 'SoilSensor1' for a soil moisture sensor.
 
