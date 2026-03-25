@@ -157,3 +157,12 @@ Using the `mosquitto_sub` program you can listen for MQTT packets, this can be u
 ```
 mosquitto_sub -v -u "<mqtt_username>" -P "<mqtt_password>" -h "<server_ip>" -p <server_port> -t "zigbee2mqtt/#"
 ```
+
+### Listen for all messages from a single device
+
+Zigbee2MQTT can be a bit noisy with status messages, so to only view messages from your device you do the following:
+
+```
+mosquitto_sub -v -u "<mqtt_username>" -P "<mqtt_password>" -h "<server_ip>" -p <server_port> -t "zigbee2mqtt/SoilSensor1/#"
+```
+
