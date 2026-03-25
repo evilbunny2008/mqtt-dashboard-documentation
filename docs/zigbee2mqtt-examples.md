@@ -2,7 +2,7 @@
 
 # Introduction
 
-I found starting out with MQTT Dashboard to be a little daunting, mainly due to a lack of example configurations, my hope is detailing what works works and how to configure MQTT Dashboard will help the next person that comes along not really sure on what to do
+I found starting out with [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.app.vetru.mqttdashboard) to be a little daunting, mainly due to a lack of example configurations, my hope is detailing what works works and how to configure MQTT Dashboard will help the next person that comes along not really sure on what to do
 
 This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), is setup, you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) and it's sending and receiving MQTT messages, and you have MQTT Dashboard connected to the same MQTT server and it can receive messages.
 
