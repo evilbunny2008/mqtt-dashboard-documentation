@@ -2,17 +2,21 @@
 
 # Introduction
 
-Starting out with MQTT Dashboard is a little daunting mainly due to a lack of examples and details on how to configure MQTT Dashboard, below is what I found to work.
+I found starting out with MQTT Dashboard to be a little daunting, mainly due to a lack of example configurations, my hope is detailing what works works and how to configure MQTT Dashboard will help the next person that comes along not really sure on what to do
 
-This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), has been setup and is working, you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) has been setup and is working, and you have MQTT Dashboard setup and is connected to the MQTT server.
+This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), is setup, you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) and it's sending and receiving MQTT messages, and you have MQTT Dashboard connected to the same MQTT server and it can receive messages.
+
+If you need help getting those working check out [my GitHub repository](https://github.com/evilbunny2008/UsefulScriptsAndOtherTidbits/tree/main/MQTT) with details for Debian 13/Trixie for configuration examples and things I found useful to know.
 
 ## Adding a soil moisture sensor
 
 [Zigbee soil monitoring sensors](https://www.aliexpress.com/item/1005008987466283.html) provide temperature, humidity and soil moisture readings.
 
-It's advisable to set the friendly name for your sensor in Zigbee2MQTT to something more memorable and unique such as 'SoilSensor1', you can do this by going to the devices page and clicking on the current friendly name and then clicking the edit icon next to the friendly name. By default this will be 0x followed by a hex string which can be used if you don't change it.
+It's advisable to set the friendly name for your sensor in the Zigbee2MQTT web interface to something more memorable, such as 'SoilSensor1', you can do this by going to the device section, then click on the current friendly name and then click on the edit icon next to the friendly name. By default this will be 0x followed by a hex string which can be used if you don't change it.
 
-From the home screen click on the '+' button toward the bottom right on the screen.
+### From the MQTT Dashboard home screen
+
+Click on the '+' button toward the bottom right of the screen.
 
 Select 'Create Widget'.
 
@@ -100,73 +104,78 @@ Click 'Done'
 
 Just click 'Done' and it will take you back to the home screen hopefully showing you the current readings.
 
-## Adding a smart water timer
+## Adding a device that does more than broadcast sensor information
+
+Unlike the soil moisture sensors, other devices such as smart water timers can be made to dturn water on and off.
+
+This functionality adds a little more complicatation as you need to set additonal details in the sending section.
 
 [Zigbee smart water timers](https://www.aliexpress.com/item/1005009335943136.html) allow you to automate turning water on and off.
 
 As with the soil moisture sensor it's worth while setting a friendly name for the device to something friendlier like 'GardenTap'.
 
-Unlike the soil moisture sensor, smart water timers can be made to turn water on and off and this is a little more complicated as you need to set details in the sending section as well.
+### From the MQTT Dashboard home screen
 
-From the home screen click on the '+' button toward the bottom right on the screen.
+From the home screen click on the '+' button toward the bottom right of the screen.
 
 Select 'Create Widget'.
 
-Enter a label for your widget in the 'Name' text box, for example 'GardenTap', then pick a widget group such as 'Backyard'.
+Enter a label for your widget in the 'Name' text box such as 'GardenTap', then pick a widget group such as 'Backyard'.
 
 ### Adding a switch to turn water on and off remotely
 
 Touch on 'Text' in the 'Widget Properties' section.
 
-Type a name for the reading in the 'Name' text box, such as 'Tap' or 'LeftTap' if you have a smart timer with more than one outlet.
+Type a name for the reading in the 'Name' text box, such as 'Tap' or 'LeftOutlet' if you have a device with more than one outlet.
 
 For 'Type' select 'Switch'.
 
 For 'Status Icon "On"' there isn't a suitable tap or water icon available, so I picked the power plug icon which can be found on the second last row.
 
-For 'Status Icon "On"' I picked the power plug icon which is crossed out and it can be found on the second lasgt row next to the on icon.
+For 'Status Icon "On"' I picked the power plug icon which is crossed out and it can be found on the second last row next to the on icon.
 
 For 'Subscription' in this case it would be 'zigbee2mqtt/GardenTap'.
 
-Tick the 'JsonPath parse data' check box, then in the 'JsonPath parse data (payload)' text box set it to '$.state', if you have more than one outlet this might be '$.state_l1' instead.
+Tick the 'JsonPath parse data' check box, then in the 'JsonPath parse data (payload)' text box set it to '$.state'. If you have more than one outlet you may need to use '$.state_l1' or similar instead.
 
-In the sending section untick 'Send topic same as subscription topic' if checked.
+In the sending section, make sure 'Send topic same as subscription topic' is unticked.
 
 Set the 'Send Topic' to 'zigbee2mqtt/GardenTap/set'
 
-Zigbee2MQTT expects commands to be in JSON format, so set 'Prefix' to '{"state": "'. Then set 'Suffix' to be '"}'. This is so when MQTT Dashboard transmits an 'ON' command the message body is {"state": "ON"}.
+If your smart water timer has more than one outlet you may need to use 'state_l1' instead of 'state' below, and 'state_l2' for the 2nd outlet.
 
-If your smart water timer has more than one outlet you may need to use 'state_l1' instead of state in the above setting, and 'state_l2' for the 2nd outlet.
+Zigbee2MQTT expects commands to be JSON formatted, so set 'Prefix' to '{"state": "'. Then set 'Suffix' to be '"}'. This is so when MQTT Dashboard transmits an 'ON' command the message body is {"state": "ON"}.
 
-Note: For JSON to be valid you must use double quotes.
+Note: For JSON to be valid you must only use double quotes for the prefix and suffix.
 
 You can leave 'On' set to 'ON' and 'Off' set to 'OFF'.
 
 Click 'Done'
 
-You can either add another outlet or just click 'Done'.
+You can then add another outlet or just click 'Done'.
 
 Your should now see one or more switches on the home screen and touching on them should activate the solenoid in the device.
 
 ## Debugging
 
-While MQTT dashboard does offer access to some MQTT messages, it seems to be restricted to configured widgets and values.
+While MQTT dashboard does offer access to some MQTT messages, it seems to be restricted to configured widgets and values, rather than finding what topics to subscribe to.
 
 Using the `mosquitto_sub` program you can listen for complete MQTT messages, this can be useful for identifying the actual device names Zigbee2MQTT uses.
 
-### Listen for all messages under the zigbee2mqtt topic
+### Listening for all messages under the zigbee2mqtt topic
 
 ```
 mosquitto_sub -v -u "<mqtt_username>" -P "<mqtt_password>" -h "<server_ip>" -p <server_port> -t "zigbee2mqtt/#"
 ```
 
-### Listen for all messages from a single device
+### Listening for all messages from a sub-topic or device
 
 Zigbee2MQTT can be a bit noisy with status messages, so to only view messages from your device you do the following:
 
 ```
 mosquitto_sub -v -u "<mqtt_username>" -P "<mqtt_password>" -h "<server_ip>" -p <server_port> -t "zigbee2mqtt/SoilSensor1/#"
 ```
+
 ### Example Zigbee2MQTT output
 
 ```
