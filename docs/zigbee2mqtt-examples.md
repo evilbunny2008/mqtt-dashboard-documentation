@@ -4,7 +4,7 @@
 
 Starting out with MQTT Dashboard is a little daunting mainly due to a lack of examples and details on how to configure MQTT Dashboard, below is what I found to work.
 
-This documante assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), has been setup and is working, you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) has been setup and is working, and you have MQTT Dashboard setup and is connected to the MQTT server.
+This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), has been setup and is working, you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) has been setup and is working, and you have MQTT Dashboard setup and is connected to the MQTT server.
 
 ## Adding a soil moisture sensor
 
@@ -122,7 +122,7 @@ Type a name for the reading in the 'Name' text box, such as 'Tap' or 'LeftTap' i
 
 For 'Type' select 'Switch'.
 
-For 'Status Icon "On"' there isn't a suitable tap or water icon available, so I picked the power plug icon which can be found on the second lasgt row.
+For 'Status Icon "On"' there isn't a suitable tap or water icon available, so I picked the power plug icon which can be found on the second last row.
 
 For 'Status Icon "On"' I picked the power plug icon which is crossed out and it can be found on the second lasgt row next to the on icon.
 
@@ -146,7 +146,7 @@ Click 'Done'
 
 You can either add another outlet or just click 'Done'.
 
-Your should now see one or more switches on the home screen and touching on them should activate the solinoid in the device.
+Your should now see one or more switches on the home screen and touching on them should activate the solenoid in the device.
 
 ## Debugging
 
