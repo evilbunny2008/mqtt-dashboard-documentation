@@ -16,7 +16,7 @@ My hope is documenting examples will help people avoid corporate cloud services 
 
 Zigbee based [soil moisture sensors](https://www.aliexpress.com/item/1005008987466283.html) are incredibly good value for money and provide temperature, humidity and soil moisture readings.
 
-It's advisable to set a friendly name for your devices in the Zigbee2MQTT web interface to something memorable, such as 'SoilSensor1' for a soil moisture sensor.
+It's advisable to set a friendly names for your devices in the Zigbee2MQTT web interface to memorable ones instead, such as 'SoilSensor1' for a soil moisture sensor.
 
 To do this, go to the device section, then click on the current friendly name on the left side of the device table.
 
