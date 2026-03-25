@@ -2,13 +2,13 @@
 
 # Introduction
 
-I found starting out with [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.app.vetru.mqttdashboard) to be a little daunting, mainly due to a lack of example configurations, my hope is detailing what I was able to accomplish will help others to use Zigbee devices, and avoid corporate cloud services that have a tendency to be turned off, leaving you with expensive toys that can't be used.
-
 [MQTT](https://mqtt.org/) is a light weight protocol designed for Internet of Things devices, not just for home automation, but everything up to industrial automation.
 
 This document assumes a MQTT server, such as [Mosquitto](https://mosquitto.org/), is setup, and you also have [Zigbee2MQTT](https://www.zigbee2mqtt.io/) sending and receiving MQTT messages, and you have MQTT Dashboard connected to that MQTT server.
 
 [My GitHub repository](https://github.com/evilbunny2008/UsefulScriptsAndOtherTidbits/tree/main/MQTT) has configuration examples and useful things to know for [Debian 13/Trixie](https://www.debian.org/).
+
+I found starting out with [MQTT Dashboard](https://play.google.com/store/apps/details?id=com.app.vetru.mqttdashboard) to be a little daunting, mainly due to a lack of example configurations, my hope is detailing what I was able to accomplish will help others wanting to use Zigbee devices, so they too can avoid corporate cloud services that have a tendency to be turned off, leaving you with expensive toys that can't be used.
 
 ## Adding a soil moisture sensor
 
